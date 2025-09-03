@@ -1,0 +1,11 @@
+s = input()
+arr =[ ]
+lower_s = s.lower()
+for i in lower_s:
+    if i.isalnum():
+        arr.append(i)
+cleaned = "".join (arr)
+if cleaned == cleaned[::-1]:
+    print ("true")
+else:
+    print ("false")
