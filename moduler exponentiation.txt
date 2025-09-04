@@ -1,0 +1,9 @@
+moduler exponentiation
+
+t = int(input().strip())
+x, n, m = list(map(int,input().split()))
+testcase1 = pow(x,n,m)
+x, n, m = list(map(int,input().split()))
+testcase2 = pow(x,n,m)
+print(testcase1)
+print(testcase2)
