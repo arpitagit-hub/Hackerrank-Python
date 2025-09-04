@@ -1,0 +1,23 @@
+megaprime
+
+t = int(input().strip())
+for _ in range(t):
+    left, right = map(int, input().split())
+    arr = []
+    for i in range(left, right+1):
+        prime = True
+        if i < 2:
+            prime = False
+        for j in range(2, int(i**0.5)+1):
+            if i % j == 0:
+                prime = False
+                break
+        if prime:
+            good = True
+            for digit in str(i):
+                if int(digit) not in [2,3,5,7]:
+                    good = False
+                    break
+            if good:
+                arr.append(i)
+    print(len(arr))
