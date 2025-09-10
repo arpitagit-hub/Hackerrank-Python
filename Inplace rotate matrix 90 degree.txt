@@ -1,0 +1,10 @@
+Inplace rotate matrix 90 degree
+t = int(input().strip())
+for i in range(t):
+    n = int(input().strip())
+    arr = [list(map(int,input().split( ))) for i in range(n)]
+    roated = list(zip(*arr))
+    roated = roated[::-1]
+    for row in roated:
+        print(*row)
+    
