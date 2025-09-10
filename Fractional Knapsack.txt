@@ -1,0 +1,22 @@
+Fractional Knapsack
+t = int(input().strip())
+for i in range(t):
+    n,w = list(map(int,input().split()))
+    weight = list(map(int,input().split()))
+    value = list(map(int,input().split()))
+
+    item = [ ]
+    for i in range(n):
+        item.append((value[i]/weight[i],weight[i],value[i]))
+    item.sort(reverse = True)
+    total = 0.0
+    for ratio,wt,val in item:
+        if w>=wt:
+            total +=val
+            w -= wt
+        else:
+            total += ratio*w
+            break
+    print(f"{total:.2f}")
+                
+        
